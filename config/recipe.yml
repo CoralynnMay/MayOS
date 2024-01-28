@@ -17,9 +17,9 @@ modules:
         # configuration you wish to end up in /etc/ on the booted system
         # should be added into /usr/etc/ as that is the proper "distro"
         # config directory on ostree. Read more in the files module's README
-  - type: bling # configure what to pull in from ublue-os/bling
-    install:
-      - ublue-update 
+  - type: script # configure what to pull in from ublue-os/bling
+    scripts:
+      - alternatives-workaround.sh 
   - type: rpm-ostree
     repos:
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
@@ -71,4 +71,3 @@ modules:
       # this sets up the proper policy & signing files for signed images to work
       - tailscaled.sh
       - signing.sh
-      - workarounds.sh
