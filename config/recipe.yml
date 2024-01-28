@@ -32,7 +32,6 @@ modules:
       - qt6-qtwayland
       - polkit-kde
       - dolphin
-      - emacs
       - tailscale
       - tldr
       - zsh
@@ -62,6 +61,10 @@ modules:
     user:
       repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
       repo-name: flathub
+  - type: rpm-ostree
+    repos:
+    install:
+      - emacs
   - type: script
     scripts:
       # this sets up the proper policy & signing files for signed images to work
