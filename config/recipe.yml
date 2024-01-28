@@ -23,6 +23,7 @@ modules:
     install:
       - hyprland
       - xdg-desktop-portal-hyprland
+      - waybar
       - kitty
       - wofi
       - dunst
