@@ -34,6 +34,7 @@ modules:
       - dolphin
       - tailscale
       - tldr
+      - emacs
       - zsh
     remove:
       - firefox # default firefox removed in favor of flatpak
@@ -62,11 +63,9 @@ modules:
       repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
       repo-name: flathub
   - type: rpm-ostree
-    repos:
-    install:
-      - emacs
   - type: script
     scripts:
       # this sets up the proper policy & signing files for signed images to work
+      - workarounds.sh
       - tailscaled.sh
       - signing.sh
