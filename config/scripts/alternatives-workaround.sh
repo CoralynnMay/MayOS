@@ -7,3 +7,4 @@ set -oue pipefail
 
 # Your code goes here.
 mkdir -p /var/lib && ln -sf /etc/alternatives /var/lib/alternatives && echo 'symlinked alternatives'
+ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && ln -sf /etc/alternatives/ld /usr/bin/ld && echo 'ld linked'
