@@ -17,6 +17,9 @@ modules:
         # configuration you wish to end up in /etc/ on the booted system
         # should be added into /usr/etc/ as that is the proper "distro"
         # config directory on ostree. Read more in the files module's README
+  - type: script
+    scripts:
+      - workarounds.sh
   - type: rpm-ostree
     repos:
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
@@ -66,6 +69,5 @@ modules:
   - type: script
     scripts:
       # this sets up the proper policy & signing files for signed images to work
-      - workarounds.sh
       - tailscaled.sh
       - signing.sh
