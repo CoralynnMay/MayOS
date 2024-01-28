@@ -38,6 +38,7 @@ modules:
       - zsh
     remove:
       - sway
+      - sway-systemd
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
       - thunar-archive-plugin
@@ -66,4 +67,5 @@ modules:
   - type: script
     scripts:
       # this sets up the proper policy & signing files for signed images to work
+      - tailscaled.sh
       - signing.sh
