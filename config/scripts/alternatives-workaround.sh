@@ -6,4 +6,4 @@
 set -oue pipefail
 
 # Your code goes here.
-ln -sf /etc/alternatives /var/lib/alternatives && echo 'symlinked alternatives'
+mkdir -p /var/lib && ln -sf /etc/alternatives /var/lib/alternatives && echo 'symlinked alternatives'
