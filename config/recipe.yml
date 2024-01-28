@@ -37,9 +37,6 @@ modules:
       - tldr
       - zsh
     remove:
-      - sway
-      - sway-systemd
-      - sway-config-fedora
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
       - thunar-archive-plugin
