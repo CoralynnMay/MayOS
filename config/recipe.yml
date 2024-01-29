@@ -45,7 +45,6 @@ modules:
     remove:
       - sddm
       - weston
-      - sddm-wayland-generic
       - sway
       - sway-config-fedora
       - sway-systemd
