@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+echo 'Ready to install oh my zsh'
+read -p "Make sure internet is working, then press enter" < /dev/tty
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

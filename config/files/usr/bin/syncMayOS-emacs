@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+echo 'Ready to install doom emacs'
+read -p "Make sure internet is working, then press enter" < /dev/tty
+
+git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
+~/.config/emacs/bin/doom install

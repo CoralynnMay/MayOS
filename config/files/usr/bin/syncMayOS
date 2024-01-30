@@ -1,0 +1,79 @@
+#!/usr/bin/env bash
+
+if [ -z "$XDG_CONFIG_HOME" ]; then
+    XDG_CONFIG_HOME="$HOME/.config"
+fi
+
+if [ -d "$XDG_CONFIG_HOME/emacs" ]; then
+    emacsconfigured=1
+else
+    emacsconfigured=0
+fi
+
+if [ -d "$HOME/.oh-my-zsh" ]; then
+    ohmyzshconfigured=1
+else
+    ohmyzshconfigured=0
+fi
+
+if [ -h "$XDG_CONFIG_HOME/hypr/hyprland.conf" ] && [ "$(readlink -f "$XDG_CONFIG_HOME/hypr/hyprland.conf")" = "/etc/hypr/hyprland.conf" ]; then
+    hyprlandconfigured=1
+else
+    hyprlandconfigured=0
+fi
+
+if [ -h "$XDG_CONFIG_HOME/kitty/kitty.conf" ] && [ "$(readlink -f "$XDG_CONFIG_HOME/kitty/kitty.conf")" = "/etc/kitty/kitty.conf" ] && \
+       [ -h "$XDG_CONFIG_HOME/kitty/current-theme.conf" ] && [ "$(readlink -f "$XDG_CONFIG_HOME/kitty/current-theme.conf")" = "/etc/kitty/current-theme.conf" ]; then
+    kittyconfigured=1
+else
+    kittyconfigured=0
+fi
+
+if [ -h "$XDG_CONFIG_HOME/waybar/config" ] && [ "$(readlink -f "$XDG_CONFIG_HOME/waybar/config")" = "/etc/waybar/config" ] && \
+       [ -h "$XDG_CONFIG_HOME/waybar/style.css" ] && [ "$(readlink -f "$XDG_CONFIG_HOME/waybar/style.css")" = "/etc/waybar/style.css" ]; then
+    waybarconfigured=1
+else
+    waybarconfigured=0
+fi
+
+if [ -h "$XDG_CONFIG_HOME/wofi/style.css" ] && [ "$(readlink -f "$XDG_CONFIG_HOME/wofi/style.css")" = "/etc/wofi/styles.css" ]; then
+    woficonfigured=1
+else
+    woficonfigured=0
+fi
+
+if [ -h "$XDG_CONFIG_HOME/neofetch/config.conf" ] && [ "$(readlink -f "$XDG_CONFIG_HOME/neofetch/config.conf")" = "/etc/neofetch/config.conf" ]; then
+    neofetchconfigured=1
+else
+    neofetchconfigured=0
+fi
+
+if [ $hyprlandconfigured = 0 ]; then
+    ln -sf "/etc/hypr/hyprland.conf" "$XDG_CONFIG_HOME/hypr/hyprland.conf"
+fi
+
+if [ $kittyconfigured = 0 ]; then
+    ln -sf "/etc/kitty/kitty.conf" "$XDG_CONFIG_HOME/kitty/kitty.conf"
+    ln -sf "/etc/kitty/current-theme.conf" "$XDG_CONFIG_HOME/kitty/current-theme.conf"
+fi
+
+if [ $waybarconfigured = 0 ]; then
+    ln -sf "/etc/waybar/config" "$XDG_CONFIG_HOME/waybar/config"
+    ln -sf "/etc/waybar/style.css" "$XDG_CONFIG_HOME/waybar/style.css"
+fi
+
+if [ $woficonfigured = 0 ]; then
+    ln -sf "/etc/wofi/style.css" "$XDG_CONFIG_HOME/wofi/style.css"
+fi
+
+if [ $neofetchconfigured = 0 ]; then
+    ln -sf "/etc/neofetch/config.conf" "$XDG_CONFIG_HOME/neofetch/config.conf"
+fi
+
+if [ $emacsconfigured = 0 ]; then
+    kitty syncMayOS-emacs
+fi
+
+if [ $ohmyzshconfigured = 0 ]; then
+    kitty syncMayOS-ohmyzsh
+fi
