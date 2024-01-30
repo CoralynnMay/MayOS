@@ -41,7 +41,8 @@ modules:
       - zsh
       - fd-find
       - ShellCheck
-      - plasma-pa
+      - pasystray
+      - neofetch
     remove:
       - sddm
       - sway
