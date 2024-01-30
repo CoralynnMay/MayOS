@@ -45,6 +45,7 @@ modules:
       - pasystray
       - neofetch
       - udiskie
+      - ark
     remove:
       - foot
       - rofi
