@@ -6,4 +6,4 @@
 set -oue pipefail
 
 # Your code goes here.
-systemctl enable tailscaled.service && echo 'tailscaled enabled'
+flatpak override --filesystem=home org.mozilla.Firefox
