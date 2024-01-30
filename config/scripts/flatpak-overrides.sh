@@ -6,4 +6,4 @@
 set -oue pipefail
 
 # Your code goes here.
-flatpak override --filesystem=home org.mozilla.Firefox
+flatpak override --filesystem=home org.mozilla.firefox
