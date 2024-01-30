@@ -44,6 +44,7 @@ modules:
       - ShellCheck
       - pasystray
       - neofetch
+      - udiskie
     remove:
       - foot
       - rofi
