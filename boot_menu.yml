@@ -1,5 +1,5 @@
 ublue_variants:
-  - label: coralynnmay/mayos
+  - label: mayos
     ks: /kickstart/ublue-os.ks
     flavors:
       - label: mayos
