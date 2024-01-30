@@ -29,7 +29,7 @@ tooltip label {
 	color: white;
 }
 
-#mode, #clock, #battery, #network, #cpu, #memory, #wireplumber {
+#mode, #clock, #battery, #cpu, #memory {
     padding: 5px 15px;
 }
 

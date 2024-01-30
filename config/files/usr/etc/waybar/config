@@ -3,12 +3,9 @@
     "modules-left": ["hyprland/workspaces"],
     "modules-center": [],
     "modules-right": ["tray", "cpu", "memory", "battery", "clock"],
-    "sway/window": {
-        "max-length": 50
-    },
     "battery": {
         "format": "{capacity}% {icon} ",
-	"format-icons": ["", "", "", "", ""],
+        "format-icons": ["", "", "", "", ""],
     },
     "clock": {
         "format-alt": "{:%a, %d. %b  %H:%M}"
@@ -18,26 +15,13 @@
 	    "format": "{usage}% ",
 	    "max-length": 10
 	},
-"memory": {
-    "interval": 30,
-    "format": "{}% ",
-    "max-length": 10
-},
-    "network": {
-	"interface": "wlan0",
-	"format-wifi": "{signalStrength}%  ",
-	"tooltip-format-wifi": "{essid} ({signalStrength}%)  "
+    "memory": {
+        "interval": 30,
+        "format": "{}% ",
+        "max-length": 10
     },
-    "wireplumber": {
-	    "format": "{volume}% {icon}",
-	    "format-muted": "",
-	    "scroll-step": 0.2,
-	    "reverse-scrolling": 1,
-	    "on-click": "helvum",
-	    "format-icons": ["", "", ""]
-	},
 	"tray": {
-    "icon-size": 21,
-    "spacing": 10
-}
+        "icon-size": 21,
+        "spacing": 10
+    }
 }
