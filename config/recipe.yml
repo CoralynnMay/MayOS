@@ -61,8 +61,8 @@ modules:
     system:
       enabled:
         - tailscaled.service
-      disabled:
         - chronyd.service
+      disabled:
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
