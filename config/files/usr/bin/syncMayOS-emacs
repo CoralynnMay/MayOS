@@ -10,4 +10,6 @@ rm -rf "$HOME/.emacs.d"
 git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
 ~/.config/emacs/bin/doom install
 
+echo 'Emacs will now open and attempt to install missing font icons, close when done to continue'
+emacs -f nerd-icons-install-fonts
 emacs --daemon
