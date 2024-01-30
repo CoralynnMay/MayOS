@@ -46,7 +46,6 @@ modules:
       - neofetch
       - udiskie
       - ark
-      - chrony
     remove:
       - foot
       - sddm
@@ -62,6 +61,7 @@ modules:
     system:
       enabled:
         - tailscaled.service
+      disabled:
         - chronyd.service
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
