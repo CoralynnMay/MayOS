@@ -44,7 +44,6 @@ modules:
       - plasma-pa
     remove:
       - sddm
-      - weston
       - sway
       - sway-config-fedora
       - sway-systemd
