@@ -1,0 +1,77 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(43, 48, 59, 0.5);
+    color: white;
+}
+
+tooltip {
+  background: rgba(43, 48, 59, 1.0);
+  border: 1px solid rgba(100, 114, 125, 0.5);
+}
+tooltip label {
+  color: white;
+}
+
+#workspaces button {
+    padding: 0 10px;
+    background: transparent;
+    color: gray;
+}
+
+#workspaces button.active {
+	color: white;
+}
+
+#mode, #clock, #battery, #network, #cpu, #memory, #wireplumber {
+    padding: 5px 15px;
+}
+
+#mode {
+    background: #64727D;
+}
+
+#clock {
+    background-color: #64727D;
+}
+
+#battery {
+    background-color: #ffffff;
+    color: black;
+}
+
+#network {
+    background-color: #008b8b;
+}
+
+#memory {
+    background-color: #8b0000;
+}
+
+#battery.charging {
+    color: white;
+    background-color: #028A0F;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}
+
+#battery.warning:not(.charging) {
+    background: #f53c3c;
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
