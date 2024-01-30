@@ -48,7 +48,6 @@ modules:
       - ark
     remove:
       - foot
-      - rofi
       - sddm
       - sway
       - sway-config-fedora
