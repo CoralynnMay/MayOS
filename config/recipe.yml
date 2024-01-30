@@ -76,6 +76,9 @@ modules:
     user:
       repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
       repo-name: flathub
+  - type: bling
+    install:
+      - ublue-update
   - type: script
     scripts:
       # this sets up the proper policy & signing files for signed images to work
