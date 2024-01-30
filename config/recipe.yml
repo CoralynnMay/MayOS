@@ -26,6 +26,7 @@ modules:
     # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
     install:
       - hyprland
+      - wl-clipboard
       - xdg-desktop-portal-hyprland
       - waybar
       - kitty
@@ -44,6 +45,8 @@ modules:
       - pasystray
       - neofetch
     remove:
+      - foot
+      - rofi
       - sddm
       - sway
       - sway-config-fedora
