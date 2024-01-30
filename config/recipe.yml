@@ -46,6 +46,7 @@ modules:
       - neofetch
       - udiskie
       - ark
+      - chrony
     remove:
       - foot
       - sddm
