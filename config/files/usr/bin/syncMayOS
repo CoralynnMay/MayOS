@@ -77,3 +77,7 @@ fi
 if [ $ohmyzshconfigured = 0 ]; then
     kitty syncMayOS-ohmyzsh
 fi
+
+if ! [[ $(flatpak override --show --user org.mozilla.firefox) ]]; then
+    flatpak override --filesystem=home --user org.mozilla.firefox
+fi
