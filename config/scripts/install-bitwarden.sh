@@ -6,7 +6,7 @@
 set -oue pipefail
 
 # Your code goes here.
-curl -o /tmp/bitwarden.rpm -L "https://vault.bitwarden.com/download/?app=desktop&platform=linux&variant=rpm"
+curl -o /tmp/bitwarden.rpm --proto '=https' --tlsv1.2 -L "https://vault.bitwarden.com/download/?app=desktop&platform=linux&variant=rpm"
 mkdir -p "/var/opt"
 ln -s "/var/opt" "/opt"
 mkdir -p "/usr/lib/opt/Bitwarden"
