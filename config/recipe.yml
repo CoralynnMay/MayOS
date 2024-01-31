@@ -72,6 +72,7 @@ modules:
         - org.mozilla.firefox
         - com.bitwarden.desktop
         - com.github.tchx84.Flatseal
+        - com.discordapp.Discord
       remove:
     user:
       repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
