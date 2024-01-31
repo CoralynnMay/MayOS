@@ -48,6 +48,7 @@ modules:
       - ark
       - pandoc
       - openssh-askpass
+      - mpv
     remove:
       - foot
       - sddm
