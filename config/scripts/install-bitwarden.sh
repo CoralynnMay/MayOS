@@ -7,4 +7,3 @@ set -oue pipefail
 
 # Your code goes here.
 curl -o /tmp/bitwarden.rpm -L "https://vault.bitwarden.com/download/?app=desktop&platform=linux&variant=rpm"
-rpm-ostree install /tmp/bitwarden.rpm
