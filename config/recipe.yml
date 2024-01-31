@@ -49,6 +49,7 @@ modules:
       - pandoc
       - openssh-askpass
       - mpv
+      - nnn
     remove:
       - foot
       - sddm
