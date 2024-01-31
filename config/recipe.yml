@@ -20,7 +20,6 @@ modules:
   - type: script # configure what to pull in from ublue-os/bling
     scripts:
       - alternatives-workaround.sh
-      - install-bitwarden.sh
   - type: rpm-ostree
     repos:
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
@@ -47,8 +46,6 @@ modules:
       - neofetch
       - udiskie
       - ark
-    optfix:
-      - /tmp/bitwarden.rpm
     remove:
       - foot
       - sddm
@@ -86,4 +83,5 @@ modules:
     scripts:
       # this sets up the proper policy & signing files for signed images to work
       - link-ld.sh
+      - install-bitwarden.sh
       - signing.sh
