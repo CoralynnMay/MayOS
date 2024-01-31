@@ -46,6 +46,7 @@ modules:
       - neofetch
       - udiskie
       - ark
+      - pandoc
     remove:
       - foot
       - sddm
