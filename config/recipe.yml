@@ -70,7 +70,6 @@ modules:
       repo-name: flathub
       install:
         - org.mozilla.firefox
-        - com.bitwarden.desktop
         - com.github.tchx84.Flatseal
         - com.discordapp.Discord
       remove:
@@ -84,4 +83,5 @@ modules:
     scripts:
       # this sets up the proper policy & signing files for signed images to work
       - link-ld.sh
+      - install-bitwarden.sh
       - signing.sh
