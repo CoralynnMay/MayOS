@@ -76,6 +76,7 @@ modules:
         - org.mozilla.firefox
         - com.github.tchx84.Flatseal
         - com.discordapp.Discord
+        - org.kde.okular
       remove:
     user:
       repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
