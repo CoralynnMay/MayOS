@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+
+if ! [[ $(ps --user $(id -u) | grep emacs) ]]; then
+    emacs --daemon
+fi
+
+emacsclient -c
